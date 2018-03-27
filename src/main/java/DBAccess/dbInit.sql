@@ -1,7 +1,7 @@
-CREATE DATABASE  IF NOT EXISTS `useradmin`;
+CREATE DATABASE  IF NOT EXISTS `legohus`;
 
 
-USE `useradmin`;
+USE `legohus`;
 
 
 DROP TABLE IF EXISTS `orders`;
