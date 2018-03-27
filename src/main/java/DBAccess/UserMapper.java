@@ -18,7 +18,7 @@ public class UserMapper {
     public static void createUser( User user ) throws LegoException {
         try {
             Connection con = Connector.connection();
-            String SQL = "INSERT INTO Users (email, password, role) VALUES (?, ?, ?)";
+            String SQL = "INSERT INTO users (email, password, role) VALUES (?, ?, ?)";
             PreparedStatement st = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
             st.setString( 1, user.getEmail() );
             st.setString( 2, user.getPassword() );
@@ -36,7 +36,7 @@ public class UserMapper {
     public static User login( String email, String password ) throws LegoException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT id, role FROM Users "
+            String SQL = "SELECT id, role FROM users "
                     + "WHERE email=? AND password=?";
             PreparedStatement st = con.prepareStatement( SQL );
             st.setString( 1, email );

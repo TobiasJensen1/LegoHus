@@ -24,7 +24,7 @@ public class OrderMapper {
     public static void makeOrder(User user, int height, int length, int width) throws LegoException {
         try {
             Connection con = Connector.connection();
-            String SQL = "INSERT INTO Orders (height, length, width, status, id) VALUES (?, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO orders (height, length, width, status, id) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement st = con.prepareStatement(SQL);
             st.setInt(1, height);
             st.setInt(2, length);
